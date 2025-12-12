@@ -31,17 +31,17 @@ template<class T> void initialize(std::map<uint16_t, T>& map, uint16_t count)
     }
 }
 
-DatabaseConfig::DatabaseConfig(uint16_t all_types)
+DatabaseConfig(uint16_t binary_input, uint16_t analog_input);
 {
-    initialize(this->binary_input, all_types);
-    initialize(this->double_binary, all_types);
-    initialize(this->analog_input, all_types);
-    initialize(this->counter, all_types);
-    initialize(this->frozen_counter, all_types);
-    initialize(this->binary_output_status, all_types);
-    initialize(this->analog_output_status, all_types);
-    initialize(this->time_and_interval, all_types);
-    initialize(this->octet_string, all_types);
+    initialize(this->binary_input, binary_input);
+    initialize(this->double_binary, 0);
+    initialize(this->analog_input, analog_input);
+    initialize(this->counter, 0);
+    initialize(this->frozen_counter, 0);
+    initialize(this->binary_output_status, 0);
+    initialize(this->analog_output_status, 0);
+    initialize(this->time_and_interval, 0);
+    initialize(this->octet_string, 0);
 };
 
 } // namespace opendnp3

@@ -31,7 +31,7 @@ struct DatabaseConfig
 {
     DatabaseConfig() = default;
 
-    DatabaseConfig(uint16_t all_types);
+    DatabaseConfig(uint16_t binary_input, uint16_t analog_input);
 
     std::map<uint16_t, BinaryConfig> binary_input;
     std::map<uint16_t, DoubleBitBinaryConfig> double_binary;

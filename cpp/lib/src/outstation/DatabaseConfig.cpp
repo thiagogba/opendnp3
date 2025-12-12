@@ -31,7 +31,7 @@ template<class T> void initialize(std::map<uint16_t, T>& map, uint16_t count)
     }
 }
 
-DatabaseConfig(uint16_t binary_input, uint16_t analog_input);
+DatabaseConfig(uint16_t binary_input, uint16_t analog_input)
 {
     initialize(this->binary_input, binary_input);
     initialize(this->double_binary, 0);
